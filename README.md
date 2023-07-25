@@ -1,4 +1,3 @@
 # Compass-Orkut
 
-
-teste teste
+teste
