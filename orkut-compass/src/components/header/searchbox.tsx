@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './searchbox.module.css';
-import searchLogo from '../../assets/searchboxlogo.png';
+import searchLogo from '../../assets//headerAssets/searchboxlogo.png';
 
 const SearchBox: React.FC = () => {
   return (

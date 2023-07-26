@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './header.module.css';
-import logo from '../../assets/orkutlogo.png';
+import logo from '../../assets/headerAssets/orkutlogo.png';
 import SearchBox from './searchbox';
+import ProfileInfoBox from './profileinfobox';
 
 const Header: React.FC = () => {
     return (
@@ -10,11 +11,12 @@ const Header: React.FC = () => {
                 <img className={styles.logoimg} src={logo} alt="Logo do Site" />
                 <nav className={styles.links}>
                     <a href="/">Início</a>
-                    <a href="/sobre">Perfil</a>
-                    <a href="/servicos">Comunidades</a>
-                    <a href="/contato">Jogos</a>
+                    <a href="/perfil">Perfil</a>
+                    <a href="/communities">Comunidades</a>
+                    <a href="/games">Jogos</a>
                 </nav>
                 <SearchBox />
+                <ProfileInfoBox text="Iuri Silva" />
             </div>
         </header>
     );
