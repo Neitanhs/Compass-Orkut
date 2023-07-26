@@ -1,0 +1,21 @@
+.searchBox {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left: 2rem;
+}
+
+.searchLogo {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+}
+
+.searchInput {
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  flex-grow: 1;
+}
