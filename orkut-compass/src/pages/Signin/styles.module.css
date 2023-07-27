@@ -1,0 +1,98 @@
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('../../assets/fonts/SFPRODISPLAYREGULAR.OTF') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.Container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    height: 100vh;   
+  }
+  
+  /* Content */
+  .Content {
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;    
+    background-color: #FDFEFF;
+    max-width: 350px;
+    padding: 48px 24px;
+    border-radius: 16px;
+  }
+  
+  /* Label */
+  .Label {
+    color: #ED2590;
+    font-family: SF Pro Display;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  
+  /* LabelSignup */
+  .LabelSignup {
+    font-size: 16px;
+    color: #676767;
+  }
+
+  .RememberPassword {
+    display: flex;
+    justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+    align-items: center;
+    color: #868686;
+    font-family: 'SF Pro Display';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 100%; /* Ocupa toda a largura disponível */
+  }
+  
+  .RememberPassword input[type="checkbox"] {    
+    appearance: none; /* Removendo o estilo padrão do checkbox */
+    width: 14px;
+    height: 14px;    
+    border-radius: 4px;
+    margin-right: 8px;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    box-shadow: 0 0 1px 1px #ddd;
+  }
+  
+  /* Estilo da caixa de seleção quando estiver marcada */
+  .RememberPassword input[type="checkbox"]:checked {
+    background-color: #ED2590;
+    padding: 3px;
+    border: 2px solid #ffffff;
+  }   
+  
+
+  /* LabelError */
+  .LabelError {
+    font-size: 14px;
+    color: red;
+  }
+  
+  /* Strong */
+  .Strong {
+    cursor: pointer;
+  }
+  
+  .Strong a {    
+    color: #ED2590;
+  font-family: SF Pro Display;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+ }
