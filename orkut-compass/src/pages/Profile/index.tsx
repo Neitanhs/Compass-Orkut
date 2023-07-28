@@ -3,7 +3,7 @@ import ProfileCard from "../../components/Profile/ProfileCard";
 import ButtonEditProfile from "../../components/Profile/ButtonEditProfile";
 import ProfileBio from "../../components/Profile/ProfileBio";
 import style from "./styles.module.css";
-import FriendsCard from "../../components/Cards/FriendsCard";
+import FriendsCard from "../../components/Profile/Cards/FriendsCard";
 
 interface ProfileProps {}
 
