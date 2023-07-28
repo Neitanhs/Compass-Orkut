@@ -1,19 +1,22 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Importe o useNavigate
 import styles from './header.module.css';
 import logo from '../../assets/headerAssets/orkutlogo.png';
 import SearchBox from './searchbox';
 import ProfileInfoBox from './profileinfobox';
 
 const HeaderProfile: React.FC = () => {
+    const navigate = useNavigate(); // Inicialize o useNavigate
+
     return (
         <header className={styles.header}>
             <div className={styles.content}>
                 <img className={styles.logoimg} src={logo} alt="Logo do Site" />
                 <nav className={styles.links}>
-                    <a href="/">Início</a>
-                    <a href="/perfil">Perfil</a>
-                    <a href="/communities">Comunidades</a>
-                    <a href="/games">Jogos</a>
+                    <a href="/" onClick={() => navigate('/')}>Início</a>
+                    <a href="/profile" onClick={() => navigate('/profile')}>Perfil</a>
+                    <a href="/" onClick={() => navigate('/')}>Comunidades</a>
+                    <a href="/" onClick={() => navigate('/')}>Jogos</a>
                 </nav>
                 <SearchBox />
                 <ProfileInfoBox text="Iuri Silva" />
