@@ -5,11 +5,12 @@
   font-style: normal;
 }
 
+
 .Container {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
   gap: 10px;
   height: 100vh;
 }
@@ -19,11 +20,12 @@
   gap: 15px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-around;
+  flex-flow: row wrap;
   width: 100%;
   background-color: #fdfeff;
   max-width: 350px;
   padding: 48px 24px;
   border-radius: 16px;
+  margin-top: 32px;
 }

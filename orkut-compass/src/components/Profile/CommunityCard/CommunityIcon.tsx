@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Icon.module.css";
+import styles from "./IconCommunity.module.css";
 import community_1 from "../../../assets/profileComunnitiesCard/community_1.png";
 import community_2 from "../../../assets/profileComunnitiesCard/community_2.png";
 import community_3 from "../../../assets/profileComunnitiesCard/community_3.png";
