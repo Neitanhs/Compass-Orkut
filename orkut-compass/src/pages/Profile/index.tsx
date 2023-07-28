@@ -3,7 +3,8 @@ import ProfileCard from "../../components/Profile/ProfileCard";
 import ButtonEditProfile from "../../components/Profile/ButtonEditProfile";
 import ProfileBio from "../../components/Profile/ProfileBio";
 import style from "./styles.module.css";
-import FriendsCard from "../../components/Profile/Cards/FriendsCard";
+import FriendsCard from "../../components/Profile/FriendsCard/FriendsCard";
+import CommunitiesCard from "../../components/Profile/CommunityCard/ComunnitiesCard";
 
 interface ProfileProps {}
 
@@ -28,8 +29,9 @@ const Profile: React.FC<ProfileProps> = () => {
           Bio="Programar sem café é igual poeta sem poesia"
         />
       </div>
-      <div>
+      <div >
         <FriendsCard />
+        <CommunitiesCard />
       </div>
     </div>
   );

@@ -8,12 +8,10 @@ interface ListProps {
 
 const List: React.FC<ListProps> = ({ names }) => {
   return (
-    <div className={style.Container}>
-      <div className={style.Content}>
-          {names.map((name) => (
-            <Icon key={name} name={name} />
-          ))}
-      </div>
+    <div className={style.Content}>
+      {names.map((name) => (
+        <Icon key={name} name={name} />
+      ))}
     </div>
   );
 };
