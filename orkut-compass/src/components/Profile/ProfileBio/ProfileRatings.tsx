@@ -12,7 +12,7 @@ interface RatingsProps {
 }
 
 const ProfileRatings: React.FC<RatingsProps> = ({Title, Type, FanCount}) => {
-    if (Type == "Fan") {
+    if (Type === "Fan") {
         return (
             <div className={styles.Fans}>
                 <p>{Title}</p>
@@ -22,7 +22,7 @@ const ProfileRatings: React.FC<RatingsProps> = ({Title, Type, FanCount}) => {
         );
     };
 
-    if (Type == "Reliable") {
+    if (Type === "Reliable") {
         return (
             <div className={styles.RatingsGeneric}>
                 <p>Confiável</p>
@@ -32,7 +32,7 @@ const ProfileRatings: React.FC<RatingsProps> = ({Title, Type, FanCount}) => {
         );
     };
 
-    if (Type == "Cool") {
+    if (Type === "Cool") {
         return (
 
             <div className={styles.RatingsGeneric}>

@@ -13,8 +13,8 @@ const ProfileCard: React.FC<ProfileProps> = ({Name, RelationshipStatus, Country}
   return (
     <div className={styles.Content}>
       <div className={styles.PFP}>
-        <img className={styles.PFPImg} src={ProfilePicture} alt="profile picture" />
-        <img src={PFPBorder} alt="profile picture border" />
+        <img className={styles.PFPImg} src={ProfilePicture} alt="profile" />
+        <img src={PFPBorder} alt="profile border" />
       </div>
       <p className={styles.ProfileName}>{Name}</p>
       <p className={styles.ProfileDescription}>{RelationshipStatus}, {Country}</p>

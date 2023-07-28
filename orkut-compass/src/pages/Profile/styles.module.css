@@ -7,9 +7,9 @@
 
 .Container {
     display: flex;
-    flex-wrap: wrap;
-    margin-top: 80px;
-    margin-left: 352px;
+    flex-flow: row wrap;
+    justify-content: center;
+
 }
 
 .ContainerCard {
@@ -17,5 +17,19 @@
 }
 
 .ContainerBio {
+    margin-right: 32px;
+}
+
+.ContainerFriendsANDCommunities {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.ContainerFriends {
+    margin-right: 32px;
+}
+
+.ContainerCommunities {
     margin-right: 32px;
 }
