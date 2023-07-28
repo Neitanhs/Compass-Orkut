@@ -10,7 +10,7 @@ const List: React.FC<ListProps> = ({ names }) => {
   return (
     <div className={style.Content}>
       {names.map((name) => (
-        <Icon key={name} name={name} />
+        <Icon key={name} name={name} image="test" />
       ))}
     </div>
   );
