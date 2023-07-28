@@ -6,6 +6,16 @@
 }
 
 .Container {
-    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 80px;
     margin-left: 352px;
+}
+
+.ContainerCard {
+    margin-right: 32px;
+}
+
+.ContainerBio {
+    margin-right: 32px;
 }
