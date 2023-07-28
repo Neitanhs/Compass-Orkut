@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../../assets/fonts/SFPRODISPLAYREGULAR.OTF') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.Container {
+    margin-top: 70px;
+    margin-left: 352px;
+}
