@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../../assets/fonts/SFPRODISPLAYREGULAR.OTF') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.Container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    margin-left: 352px;
+}
+
+.ContainerCard {
+    margin-right: 32px;
+}
+
+.ContainerBio {
+    margin-right: 32px;
+}
