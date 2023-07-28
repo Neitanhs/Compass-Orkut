@@ -1,9 +1,9 @@
-/* @font-face {
+@font-face {
   font-family: "SF Pro Display";
-  src: url("../../assets/fonts/SFPRODISPLAYREGULAR.OTF") format("opentype");
+  src: url("../../../assets/fonts/SFPRODISPLAYREGULAR.OTF") format("opentype");
   font-weight: normal;
   font-style: normal;
-} <-- "ESTÁ DANDO ERRO NÃO SEI PORQUÊ" --> */
+}
 
 
 .Container {
