@@ -29,9 +29,13 @@ const Profile: React.FC<ProfileProps> = () => {
           Bio="Programar sem café é igual poeta sem poesia"
         />
       </div>
-      <div >
-        <FriendsCard />
-        <CommunitiesCard />
+      <div className={style.ContainerFriendsANDCommunities}>
+        <div className={style.ContainerFriends}>
+          <FriendsCard />
+        </div>
+        <div className={style.ContainerCommunities}>
+          <CommunitiesCard />
+        </div>
       </div>
     </div>
   );
