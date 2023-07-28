@@ -20,7 +20,8 @@
 
 .arrowDown {
   color: #ed2590;
-  font-size: 1.2rem;
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 @media (max-width: 768px) {
