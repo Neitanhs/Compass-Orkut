@@ -25,6 +25,10 @@ const friendsAndIamges = [
 const FriendIcon: React.FC = () => {
   return (
     <>
+      <div className={styles.Titulo}>
+        <p className={styles.Amigos}>Amigos (248)</p>
+        <p className={styles.Vertodos}>Ver todos</p>
+      </div>
       <div className={styles.Content}>
         {friendsAndIamges.map((item) => (
           <div key={item.friend} className="name">
