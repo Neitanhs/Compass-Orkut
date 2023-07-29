@@ -6,28 +6,54 @@
 }
 
 .Container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 10px;
-    height: 100vh;   
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  height: 100vh;
   
-  /* Content */
-  .Content {
-    gap: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;    
-    background-color: #FDFEFF;
-    max-width: 350px;
-    padding: 48px 24px;
-    border-radius: 16px;
-  }
+}
+
+.CardImg {  
+  position: relative;
+  width: 100%;
+  height: 598px;
+  max-width: 780px;
+  background-image: linear-gradient(189deg, rgba(20, 20, 20, 0.00) 0%, #141414 100%), url(../../assets/Login_img/Pessoas.jpg);
+  background-size: cover; /* Corrige o tamanho da imagem para cobrir o elemento */
+  background-position: center center;
+  border-radius: 20px;
+}
+
+.TextoNoCantoInferior {
+  position: absolute;
+  bottom: 32px; /* Distância do texto até a parte inferior do CardImg */
+  left: 32px; /* Distância do texto até a parte esquerda do CardImg */
+  width: 617px;
+  color: #FFF;
+  font-family: SF Pro Display;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+    z-index: 2; /* Coloque o texto acima do gradiente */
+}
+
+/* Content */
+.Content {
+  gap: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 394px;
+  height: 598px;
+  max-width: 394px;
+  padding: 48px 24px;
+  border-radius: 16px;
+  background-color: #FDFEFF;
   
+}
   /* Label */
   .Label {
     color: #ED2590;
@@ -87,12 +113,14 @@
     cursor: pointer;
   }
   
-  .Strong a {    
+  .Strong a { 
     color: #ED2590;
-  font-family: SF Pro Display;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  text-decoration-line: underline;
+    font-family: SF Pro Display;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+
+  
  }
