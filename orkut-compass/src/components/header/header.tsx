@@ -1,25 +1,20 @@
 import React from 'react';
-import styles from './header.module.css';
-import logo from '../../assets/headerAssets/orkutlogo.png';
-import SearchBox from './searchbox';
-import ProfileInfoBox from './profileinfobox';
+import { useLocation } from 'react-router-dom';
+import HeaderLogin from './headerLogin';
+import HeaderProfile from './headerProfile';
 
 const Header: React.FC = () => {
-    return (
-        <header className={styles.header}>
-            <div className={styles.content}>
-                <img className={styles.logoimg} src={logo} alt="Logo do Site" />
-                <nav className={styles.links}>
-                    <a href="/">Início</a>
-                    <a href="/perfil">Perfil</a>
-                    <a href="/communities">Comunidades</a>
-                    <a href="/games">Jogos</a>
-                </nav>
-                <SearchBox />
-                <ProfileInfoBox text="Iuri Silva" />
-            </div>
-        </header>
-    );
+  const location = useLocation();
+
+  const isRootPath = location.pathname === '/';
+  const isProfilePath = location.pathname === '/profile';
+
+  return (
+    <div>
+      {isRootPath && <HeaderLogin />}
+      {isProfilePath && <HeaderProfile />}
+    </div>
+  );
 };
 
 export default Header;
