@@ -32,7 +32,7 @@ const Register: React.FC = () => {
       return;
     }
 
-    navigate("/profile");
+    navigate("/profile"); //Alterar para ir para a step 2 da Register
   };
 
   return (
