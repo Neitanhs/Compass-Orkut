@@ -32,7 +32,11 @@ const Signin: React.FC = () => {
   
 
   return (
-    <div className={styles.Container}>
+    <div className={styles.Container}>      
+      <div className={styles.CardImg}>
+      <div className={styles.TextoNoCantoInferior}>Conecta-se aos seus amigos e familiares usando recados e mensagens instantâneas</div>
+        <img src="" alt="" />             
+      </div>
       <div className={styles.Content}>
       <div className={styles.Logo}>
         {/* Coloque o SVG aqui */}
