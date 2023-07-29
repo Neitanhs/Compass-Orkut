@@ -1,0 +1,63 @@
+.Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.Content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+  width: 400px;
+}
+
+.Logo {
+  margin-bottom: 32px;
+}
+
+.Logo img {
+  max-width: 100%;
+}
+
+.Label {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+
+.Input {
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.LabelError {
+  color: red;
+  margin-top: 8px;
+}
+
+.Button {
+  background-color: #ed2590;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  margin-top: 16px;
+}
+
+.Button:hover {
+  background-color: #d61d7f;
+}
