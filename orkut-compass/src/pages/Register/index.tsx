@@ -32,9 +32,6 @@ const Register: React.FC = () => {
       return;
     }
 
-    // Send form data to server
-    console.log(formData);
-
     navigate("/profile");
   };
 
