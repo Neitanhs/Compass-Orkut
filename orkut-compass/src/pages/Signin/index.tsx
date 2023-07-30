@@ -14,25 +14,36 @@ const Signin: React.FC = () => {
   const [senha, setSenha] = useState("");
   const [error, setError] = useState<string>(""); 
 
+
+  const isValidEmail = (email: string): boolean => {
+    const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+    return emailRegex.test(email);
+  };
+
+
   const handleLogin = () => {
     if (!email || !senha) {
       setError("Preencha todos os campos");
       return;
-    }
+   }else if (!isValidEmail(email)) {
+    setError("E-mail inválido");
+    return;
+  }
 
     navigate("/profile");
   };
-
 
   const handleRegister = () => {   
 
     navigate("/register");
   };
-
   
-
   return (
-    <div className={styles.Container}>
+    <div className={styles.Container}>      
+      <div className={styles.CardImg}>
+      <div className={styles.TextoNoCantoInferior}>Conecta-se aos seus amigos e familiares usando recados e mensagens instantâneas</div>
+        <img src="" alt="" />             
+      </div>
       <div className={styles.Content}>
       <div className={styles.Logo}>
         {/* Coloque o SVG aqui */}
