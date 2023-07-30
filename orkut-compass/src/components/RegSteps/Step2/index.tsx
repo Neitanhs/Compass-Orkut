@@ -29,9 +29,9 @@ const Step2: React.FC<Step2Props> = ({ onPrevious, onComplete }) => {
   };
 
   return (
-    <div className={styles.container}>
-      <h2 className={styles.label}>Passo 2: Informações Pessoais</h2>
-      <div className={styles.content}>
+    <div className={styles.Container}>
+      <h2 className={styles.Label}>Passo 2: Informações Pessoais</h2>
+      <div className={styles.Content}>
         <Input
           type="text"
           placeholder="Autodescrição (Quem sou eu)"

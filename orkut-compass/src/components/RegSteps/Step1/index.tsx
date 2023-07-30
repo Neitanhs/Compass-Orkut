@@ -50,9 +50,9 @@ const Step1: React.FC<Step1Props> = ({ onNext }) => {
   };
 
   return (
-    <div className={styles.container}>
-      <h2 className={styles.label}>Passo 1: Informações de Conta</h2>
-      <div className={styles.content}>
+    <div className={styles.Container}>
+      <h2 className={styles.Label}>Criando a sua conta</h2>
+      <div className={styles.Content}>
         <Input
           type="text"
           placeholder="Nome"
@@ -95,7 +95,7 @@ const Step1: React.FC<Step1Props> = ({ onNext }) => {
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
         />
-        {error && <p className={styles.labelError}>{error}</p>}
+        {error && <p className={styles.LabelError}>{error}</p>}
         <Button Text="Próximo" onClick={handleNext} />
       </div>
     </div>
