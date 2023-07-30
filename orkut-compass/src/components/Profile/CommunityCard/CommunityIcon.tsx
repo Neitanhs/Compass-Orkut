@@ -25,9 +25,13 @@ const communityAndIamges = [
 const Icon: React.FC = () => {
   return (
     <>
+      <div className={styles.Titulo}>
+        <p className={styles.Comunidades}>Comunidade (42)</p>
+        <p className={styles.Vertodos}>Ver todos</p>
+      </div>
       <div className={styles.Content}>
         {communityAndIamges.map((item) => (
-          <div key={item.community} className='name'>
+          <div key={item.community} className="name">
             <img src={item.image} alt={item.community} />
             <p>{item.community}</p>
           </div>
