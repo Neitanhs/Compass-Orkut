@@ -30,7 +30,7 @@ const Step2: React.FC<Step2Props> = ({ onPrevious, onComplete }) => {
 
   return (
     <div className={styles.Container}>
-      <h2 className={styles.Label}>Passo 2: Informações Pessoais</h2>
+      <h2 className={styles.Label}>Criação de conta</h2>
       <div className={styles.Content}>
         <Input
           type="text"
