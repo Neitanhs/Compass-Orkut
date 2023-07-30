@@ -28,6 +28,13 @@ const Step1: React.FC<Step1Props> = ({ onNext }) => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
 
+
+
+  const isValidEmail = (email: string): boolean => {
+    const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+    return emailRegex.test(email);
+  };
+
   const handleNext = () => {
     if (!name || !email || !birthDate || !city || !state || !password || !confirmPassword) {
       setError("Preencha todos os campos");
@@ -35,7 +42,11 @@ const Step1: React.FC<Step1Props> = ({ onNext }) => {
     } else if (password !== confirmPassword) {
       setError("As senhas não são iguais");
       return;
-    }
+    } else if (!isValidEmail(email)) {
+    setError("E-mail inválido");
+    return;
+  }
+
 
     setError("");
     onNext({

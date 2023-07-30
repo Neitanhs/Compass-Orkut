@@ -11,6 +11,8 @@
   justify-content: center;
   gap: 32px;
   height: 100vh;
+  margin: 0px 50px;
+  
   
 }
 
@@ -22,7 +24,15 @@
   background-image: linear-gradient(189deg, rgba(20, 20, 20, 0.00) 0%, #141414 100%), url(../../assets/Login_img/Pessoas.jpg);
   background-size: cover; /* Corrige o tamanho da imagem para cobrir o elemento */
   background-position: center center;
-  border-radius: 20px;
+  border-radius: 20px;  
+  transition: all ease 0.5s;
+  cursor: pointer;
+}
+
+.CardImg:hover{  
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(2, 2, 2, 0.7)
+  
 }
 
 .TextoNoCantoInferior {
@@ -41,6 +51,7 @@
 
 /* Content */
 .Content {
+  margin: 0;
   gap: 15px;
   display: flex;
   align-items: center;
@@ -52,6 +63,7 @@
   padding: 48px 24px;
   border-radius: 16px;
   background-color: #FDFEFF;
+  transition: all ease 0.5s;
   
 }
   /* Label */
@@ -124,3 +136,18 @@
 
   
  }
+
+
+ @media (max-width: 1000px) {
+  .Container {
+    flex-direction: column;
+  }
+
+  .CardImg {
+    display: none; /* Remover a imagem */
+  }
+
+  .Content {    
+    transform: scale(1.5);
+  }
+}
