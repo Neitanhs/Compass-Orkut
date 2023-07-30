@@ -28,3 +28,18 @@
   padding: 48px 24px;
   border-radius: 16px;
 }
+
+.Titulo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+
+}
+
+.Amigos {
+}
+
+.Vertodos {
+  color: #ED2590;
+}

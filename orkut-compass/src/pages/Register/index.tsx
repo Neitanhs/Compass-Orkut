@@ -28,6 +28,7 @@ const Register: React.FC = () => {
       {step === 2 && (
         <Step2 onPrevious={handleStep2Previous} onComplete={handleStep2Complete} />
       )}
+
     </div>
   );
 };
