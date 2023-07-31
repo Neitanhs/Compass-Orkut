@@ -2,6 +2,7 @@ import React, { Profiler } from 'react';
 import styles from "./styles.module.css";
 import ProfileRatings from './ProfileRatings';
 import ProfileInfo from './ProfileInfo';
+import ProfileInterests from './ProfileInterests';
 
 interface ProfileBioProps {
     Name: string;
@@ -33,6 +34,8 @@ const ProfileBio: React.FC<ProfileBioProps> = ({Name, Bio}) => {
             <ProfileInfo Title="Moro" Text="Guarantã" />
             <ProfileInfo Title="País" Text="Brasil" />
             <ProfileInfo Title="Cidade natal" Text="São Paulo" />
+            <ProfileInterests Title="Músicas" Content={["Trap", "Rap", "Indie"]} />
+            <ProfileInterests Title="Filmes" Content={["A rede social", "Meu amigo totoro"]} />
         </div>
     );
 };
