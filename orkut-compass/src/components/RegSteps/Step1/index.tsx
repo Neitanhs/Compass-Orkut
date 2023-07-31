@@ -79,7 +79,7 @@ const Step1: React.FC<Step1Props> = ({ onNext }) => {
 
   return (
     <div className={styles.Container}>
-      <div className={styles.Content}>
+      <form className={styles.Content}>
         <div className={styles.Logo}>
           <img src={LogoSVG} alt="Logo" />
         </div>
@@ -128,7 +128,7 @@ const Step1: React.FC<Step1Props> = ({ onNext }) => {
         />
         {error && <p className={styles.LabelError}>{error}</p>}
         <Button Text="Próximo" onClick={handleNext} />
-      </div>
+      </form>
     </div>
   );
 };
