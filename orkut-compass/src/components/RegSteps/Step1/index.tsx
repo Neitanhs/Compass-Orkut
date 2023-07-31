@@ -1,8 +1,8 @@
-// Step1.tsx
 import React, { useState } from "react";
 import styles from "./styles.module.css";
 import Input from "../../Input";
 import Button from "../../ButtonRegister";
+import LogoSVG from "../../../assets/logo/logo.svg";
 
 interface Step1Props {
   onNext: (data: Step1Data) => void;
@@ -28,11 +28,20 @@ const Step1: React.FC<Step1Props> = ({ onNext }) => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
 
-
-
   const isValidEmail = (email: string): boolean => {
     const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
     return emailRegex.test(email);
+  };
+
+  const calculateAge = (birthdate: string): number => {
+    const today = new Date();
+    const birthDateObj = new Date(birthdate);
+    let age = today.getFullYear() - birthDateObj.getFullYear();
+    const monthDiff = today.getMonth() - birthDateObj.getMonth();
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDateObj.getDate())) {
+      age--;
+    }
+    return age;
   };
 
   const handleNext = () => {
@@ -43,10 +52,18 @@ const Step1: React.FC<Step1Props> = ({ onNext }) => {
       setError("As senhas não são iguais");
       return;
     } else if (!isValidEmail(email)) {
-    setError("E-mail inválido");
-    return;
-  }
+      setError("E-mail inválido");
+      return;
+    }
 
+    const age = calculateAge(birthDate);
+    if (age < 10) {
+      setError("Você não tem idade suficiente para se cadastrar.");
+      return;
+    } else if (age > 130) {
+      setError("Por favor, insira uma idade válida.");
+      return;
+    }
 
     setError("");
     onNext({
@@ -62,8 +79,11 @@ const Step1: React.FC<Step1Props> = ({ onNext }) => {
 
   return (
     <div className={styles.Container}>
-      <h2 className={styles.Label}>Criando a sua conta</h2>
       <div className={styles.Content}>
+        <div className={styles.Logo}>
+          <img src={LogoSVG} alt="Logo" />
+        </div>
+        <h2 className={styles.Label}>Criando a sua conta</h2>        
         <Input
           type="text"
           placeholder="Nome"
@@ -99,7 +119,7 @@ const Step1: React.FC<Step1Props> = ({ onNext }) => {
           placeholder="Senha"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-        />
+        />        
         <Input
           type="password"
           placeholder="Confirme a Senha"

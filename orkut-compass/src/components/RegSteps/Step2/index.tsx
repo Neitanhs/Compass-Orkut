@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./styles.module.css";
 import Input from "../../Input";
 import Button from "../../ButtonRegister";
+import LogoSVG from "../../../assets/logo/logo.svg";
 
 interface Step2Props {
   onPrevious: () => void;
@@ -9,47 +10,60 @@ interface Step2Props {
 }
 
 export interface Step2Data {
-  autodescricao: string;
-  interesses: string;
-  statusRelacionamento: string;
+  selfDescription: string;
+  interests: string;
+  statusRelationship: string;  
 }
 
+
+
 const Step2: React.FC<Step2Props> = ({ onPrevious, onComplete }) => {
-  const [autodescricao, setAutodescricao] = useState("");
-  const [interesses, setInteresses] = useState("");
-  const [statusRelacionamento, setStatusRelacionamento] = useState("");
+  const [selfDescription, setselfDescription] = useState("");
+  const [interests, setinterests] = useState("");
+  const [statusRelationship, setstatusRelationship] = useState("");
+  const [error, setError] = useState("");
+
+
 
   const handleComplete = () => {
-    const step2Data: Step2Data = {
-      autodescricao,
-      interesses,
-      statusRelacionamento,
-    };
-    onComplete(step2Data);
+    if (!selfDescription|| !interests || !statusRelationship) {
+      setError("Preencha todos os campos");
+      return;   
+  }
+    setError("");
+    onComplete({
+      selfDescription,
+      interests,
+      statusRelationship,      
+    });
   };
 
   return (
     <div className={styles.Container}>
-      <h2 className={styles.Label}>Criação de conta</h2>
       <div className={styles.Content}>
+        <div className={styles.Logo}>        
+        <img src={LogoSVG} alt="Logo" />
+      </div>
+      <h2 className={styles.Label}>Criação de conta</h2>
         <Input
           type="text"
-          placeholder="Autodescrição (Quem sou eu)"
-          value={autodescricao}
-          onChange={(e) => setAutodescricao(e.target.value)}
+          placeholder="Fale um pouco sobre você"
+          value={selfDescription}
+          onChange={(e) => setselfDescription(e.target.value)}
         />
         <Input
           type="text"
-          placeholder="Interesses"
-          value={interesses}
-          onChange={(e) => setInteresses(e.target.value)}
+          placeholder="Quais são seus Interesses?"
+          value={interests}
+          onChange={(e) => setinterests(e.target.value)}
         />
         <Input
           type="text"
-          placeholder="Status de Relacionamento"
-          value={statusRelacionamento}
-          onChange={(e) => setStatusRelacionamento(e.target.value)}
+          placeholder="Status de Relacionamento?"
+          value={statusRelationship}
+          onChange={(e) => setstatusRelationship(e.target.value)}
         />
+        {error && <p className={styles.LabelError}>{error}</p>}
         <Button Text="Anterior" onClick={onPrevious} />
         <Button Text="Concluir" onClick={handleComplete} />
       </div>

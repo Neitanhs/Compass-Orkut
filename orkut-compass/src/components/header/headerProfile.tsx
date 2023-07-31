@@ -11,7 +11,9 @@ const HeaderProfile: React.FC = () => {
     return (
         <header className={styles.header}>
             <div className={styles.content}>
-                <img className={styles.logoimg} src={logo} alt="Logo do Site" />
+            <a href="/" onClick={() => navigate('/')}>
+            <img className={styles.logoimg} src={logo} alt="Logo do Site" />
+            </a>                
                 <nav className={styles.links}>
                     <a href="/" onClick={() => navigate('/')}>Início</a>
                     <a href="/profile" onClick={() => navigate('/profile')}>Perfil</a>

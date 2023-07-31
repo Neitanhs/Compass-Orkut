@@ -9,7 +9,9 @@ const HeaderLogin: React.FC = () => {
     return (
         <header className={styles.header}>
             <div className={styles.contentLogin}>
-                <img className={styles.logoimg} src={logo} alt="Logo do Site" />
+                 <a href="/" onClick={() => navigate('/')}>
+                     <img className={styles.logoimg} src={logo} alt="Logo do Site" />
+                </a>
                 <nav className={styles.links}>
                     <a href="/" onClick={() => navigate('/')}>Sobre o Orkut</a>
                     <a href="/" onClick={() => navigate('/')}>Centro de Segurança</a>
