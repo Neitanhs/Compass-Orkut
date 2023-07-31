@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('../../assets/fonts/SFPRODISPLAYREGULAR.OTF') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .profileInfoBox {
   display: flex;
   align-items: center;
@@ -16,6 +23,7 @@
   color: #4b4b4b;
   margin-right: 0.5rem;
   white-space: nowrap;
+  font-family: SF Pro Display;
 }
 
 .arrowDown {
