@@ -12,17 +12,23 @@ interface Step2Props {
 export interface Step2Data {
   selfDescription: string;
   statusRelationship: string;
-  hasChildren: string; // "Você tem filho?"
-  smokes: string; // "Você fuma?"
-  drinks: string; // "Você bebe?"
+  hasChildren: string;
+  smokes: string;
+  drinks: string;
+  favoriteSongs: string;
+  favoriteMovies: string;
+  profilePicture: File | null;
 }
 
 const Step2: React.FC<Step2Props> = ({ onPrevious, onComplete }) => {
   const [selfDescription, setSelfDescription] = useState("");
   const [statusRelationship, setStatusRelationship] = useState("");
-  const [hasChildren, setHasChildren] = useState(""); // New state for "Você tem filho?"
-  const [smokes, setSmokes] = useState(""); // New state for "Você fuma?"
-  const [drinks, setDrinks] = useState(""); // New state for "Você bebe?"
+  const [hasChildren, setHasChildren] = useState("");
+  const [smokes, setSmokes] = useState("");
+  const [drinks, setDrinks] = useState("");
+  const [favoriteSongs, setFavoriteSongs] = useState("");
+  const [favoriteMovies, setFavoriteMovies] = useState("");
+  const [profilePicture, setProfilePicture] = useState<File | null>(null);
   const [error, setError] = useState("");
 
   const isValidYesNoResponse = (response: string) => {
@@ -30,24 +36,46 @@ const Step2: React.FC<Step2Props> = ({ onPrevious, onComplete }) => {
     return lowerCaseResponse === "sim" || lowerCaseResponse === "não";
   };
 
+  const handleProfilePictureChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files.length > 0) {
+      setProfilePicture(e.target.files[0]);
+    }
+  };
+
   const handleComplete = () => {
-    if (!selfDescription || !statusRelationship || !hasChildren || !smokes || !drinks) {
+    if (
+      !selfDescription ||
+      !statusRelationship ||
+      !hasChildren ||
+      !smokes ||
+      !drinks ||
+      !favoriteSongs ||
+      !favoriteMovies ||
+      !profilePicture
+    ) {
       setError("Preencha todos os campos");
       return;
     }
 
-    if (!isValidYesNoResponse(hasChildren) || !isValidYesNoResponse(smokes) || !isValidYesNoResponse(drinks)) {
+    if (
+      !isValidYesNoResponse(hasChildren) ||
+      !isValidYesNoResponse(smokes) ||
+      !isValidYesNoResponse(drinks)
+    ) {
       setError("Responda 'Sim' ou 'Não' para as perguntas adequadas");
       return;
     }
 
     setError("");
     onComplete({
-      selfDescription,      
+      selfDescription,
       statusRelationship,
       hasChildren,
       smokes,
       drinks,
+      favoriteSongs,
+      favoriteMovies,
+      profilePicture,
     });
   };
 
@@ -99,6 +127,29 @@ const Step2: React.FC<Step2Props> = ({ onPrevious, onComplete }) => {
           value={drinks}
           onChange={(e) => setDrinks(e.target.value)}
         />
+
+        <h3 className={styles.LabelReg}>Músicas favoritas</h3>
+
+        <Input
+          type="text"
+          placeholder="Ex.: Nome das músicas ou bandas favoritas"
+          value={favoriteSongs}
+          onChange={(e) => setFavoriteSongs(e.target.value)}
+        />
+
+        <h3 className={styles.LabelReg}>Filmes favoritos</h3>
+
+        <Input
+          type="text"
+          placeholder="Ex.: Nome dos filmes favoritos"
+          value={favoriteMovies}
+          onChange={(e) => setFavoriteMovies(e.target.value)}
+        />
+
+        <h3 className={styles.LabelReg}>Faça upload da sua foto de perfil</h3>
+
+        <input type="file" onChange={handleProfilePictureChange} />
+
         {error && <p className={styles.LabelError}>{error}</p>}
         <Button Text="Anterior" onClick={onPrevious} />
         <Button Text="Concluir" onClick={handleComplete} />

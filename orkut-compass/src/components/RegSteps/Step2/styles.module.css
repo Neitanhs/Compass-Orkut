@@ -6,6 +6,7 @@
   }
   
   .Container {
+    margin-top: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,6 +16,7 @@
   }
   
   .Content {
+    
     gap: 15px;
     display: flex;
     align-items: center;

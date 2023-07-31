@@ -27,18 +27,37 @@
   background-color: #fdfeff;
   padding: 48px 24px;
   border-radius: 16px;
+  color: #4B4B4B;
+  font-family: SF Pro Display;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
 }
 
 .Titulo {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-between;  
 }
 
 .Comunidades {
+  color: #4B4B4B;
+font-family: SF Pro Display;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 150% */
 }
 
 
-.Vertodos {
-  color: #ed2590;
+.Vertodos {  
+color: #ED2590;
+font-family: SF Pro Display;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 171.429% */
 }
+
+
