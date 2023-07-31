@@ -6,14 +6,12 @@ import HeaderProfile from './headerProfile';
 const Header: React.FC = () => {
   const location = useLocation();
 
-  const isRootPath = location.pathname === '/';
   const isProfilePath = location.pathname === '/profile';
 
   return (
-    <div>
-      {isRootPath && <HeaderLogin />}
-      {isProfilePath && <HeaderProfile />}
-    </div>
+    <header>
+      {isProfilePath ? <HeaderProfile /> : <HeaderLogin />}
+    </header>
   );
 };
 

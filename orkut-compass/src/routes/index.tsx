@@ -1,9 +1,11 @@
 import { Fragment } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Header from "../components/header/header";
 import Signin from "../pages/Signin";
 import Profile from "../pages/Profile";
 import Register from "../pages/Register";
-import Header from "../components/header/header";
+import Footer from "../components/Footer/footer";
+
 
 const RoutesApp: React.FC = () => {
   return (
@@ -16,6 +18,7 @@ const RoutesApp: React.FC = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/*" element={<Signin />} />
         </Routes>
+        <Footer/>
       </Fragment>
     </BrowserRouter>
   );
